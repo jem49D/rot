@@ -113,15 +113,15 @@
             let email = document.getElementById("user_email").value
             let phone = document.getElementById("user_phone").value
             
-            if(name.lenght < 5){
+            if(name.length < 5){
                 document.getElementById("error").innerText = "Ошибка в имени";
                 return
             }
-                     if(name.lenght < 5){
+             if(email.length < 5){
                 document.getElementById("error").innerText = "Ошибка в email";
                 return
             }
-                     if(name.lenght < 5){
+             if(phone.length < 5){
                 document.getElementById("error").innerText = "Ошибка в номере телефона";
                 return
             }
@@ -132,6 +132,7 @@
             email: email,
             phone: phone
         }
+
         tg.sendData(JSON.stringify(data))
 
         tg.close();
